@@ -14,34 +14,37 @@ class VttFormatter:
     def __init__( self, filename ):
         self.filename = filename
 
-    def create_dictionary( self ):
-        """ Opens the .vtt file and assigns each item to a relevant dictionary element. """
-        
+    def import_file( self ):
+        """ Opens the .vtt file and creates a list of lines """
         #open the file
         with open(self.filename) as file:
             #create a list containing each line in the file
-            data = [line for line in file]
-            #initialise an empty dictionary
-            data_dict = {}
-            #initialise an empty dictionary element for messages as it will be a nested dictionary
-            data_dict['messages'] = []
-            #loop over each line in the list and assign the value to a relevent dictionary element 
-            for i, line in enumerate(data):
-                if line.startswith( 'NOTE duration' ):
-                    data_dict['duration'] = line.split(':"')[1].strip()
-                if line.startswith( 'NOTE language' ):
-                    data_dict['language'] = line.split(':')[1].strip()
-                if line.startswith('NOTE Confidence'):
-                    data_dict['messages'].append(self.read_message(i, data))
+            self.data = [line for line in file]
+
+    def create_dictionary( self ):
+        """ Assigns each item in the list of lines from the .vtt file to a relevant dictionary element. """
+        #create data list
+        self.import_file()
+        #initialise an empty dictionary
+        data_dict = {}
+        #initialise an empty dictionary element for messages as it will be a nested dictionary
+        data_dict['messages'] = []
+        #loop over each line in the list and assign the value to a relevent dictionary element 
+        for i, line in enumerate(self.data):
+            if line.startswith( 'NOTE duration' ):
+                data_dict['duration'] = line.split(':"')[1].strip()
+            if line.startswith( 'NOTE language' ):
+                data_dict['language'] = line.split(':')[1].strip()
+            if line.startswith('NOTE Confidence'):
+                data_dict['messages'].append(self.read_message(i))
         self.data_dict = data_dict
         return self.data_dict
 
-    def read_message( self, i, data):
+    def read_message( self, i ):
         """
         Loops through the list of file lines starting at a given index until the is a line break. Taken as a message item, containing a confidence level, uuid, timestamp and content and creates a dictionary.
         Args:
             i (int): Index for the start of the message item
-            data (list): list of lines from the .vtt file
         Returns:
             my_message (dict): dictionary containing the elements of each message item
         """
@@ -49,19 +52,19 @@ class VttFormatter:
         #initialise an empty dictionary
         my_message={}
         #loop over specific lines in the list based on a given index and assign the value to a relevent dictionary element
-        my_message['confidence']= data[i].split(':')[1].strip()
+        my_message['confidence']= self.data[i].split(':')[1].strip()
         i+=2
-        my_message['marker'] = data[i].strip()
+        my_message['marker'] = self.data[i].strip()
         i+=1
-        my_message['start'] = data[i].split(' ')[0].strip()
-        my_message['stop'] = data[i].split(' ')[-1].strip()
+        my_message['start'] = self.data[i].split(' ')[0].strip()
+        my_message['stop'] = self.data[i].split(' ')[-1].strip()
         #initialise an empty list to append message content if multiple lines
         my_message['content'] = []
         #append lines to list until there is a line break
-        while data[i] != '\n':
+        while self.data[i] != '\n':
             i+=1 
-            if data[i] != '\n':
-                my_message['content'].append(data[i].strip())
+            if self.data[i] != '\n':
+                my_message['content'].append(self.data[i].strip())
         return my_message
 
     def format_text(self):
@@ -124,9 +127,3 @@ class VttFormatter:
             newfile.write("%s" % line)
             newfile.write("\n \n")
 
-
-
-
-
-     
-    
