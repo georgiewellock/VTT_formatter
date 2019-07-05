@@ -4,8 +4,6 @@ branches:
 
     - master
 
-    - development
-
 language: python
 
 notifications:
