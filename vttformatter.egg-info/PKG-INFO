@@ -1,12 +1,12 @@
 Metadata-Version: 2.1
 Name: vttformatter
-Version: 1.0
+Version: 1.2
 Summary: WEBVTT to text converter
 Home-page: https://github.com/georgiewellock/VTT_formatter
 Author: Georgina L. Wellock
 Author-email: g.l.wellock@bath.ac.uk
 License: MIT
-Download-URL: https://github.com/georgiewellock/VTT_formatter/archive/1.0.tar.gz
+Download-URL: https://github.com/georgiewellock/VTT_formatter/archive/1.02.tar.gz
 Description: # VttFormatter 
         
         Converts WEBVTT files into text removing timestamps and identifiers and formatting the text into paragraphs.
