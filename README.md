@@ -66,3 +66,40 @@ Yeah.
 But now my headphones are playing up, I can still hear you though. Well, I mean 
 it is crackling. It will still be recording the audio.
 ```
+
+## Installation
+
+The simplest way to install this vttformatter is to use `pip` to install from [PyPI](https://pypi.org/project/vttformatter/)
+```
+pip install vttformatter
+```
+
+Alternatively, you can download the latest release from [GitHub](https://github.com/georgiewellock/VTT_formatter/releases), and install directly:
+```
+cd vttformatter
+pip install -e .
+```
+which installs an editable (-e) version of pyscses in your userspace.
+
+Or clone the latest version from [GitHub](https://github.com/georgiewellock/VTT_formatter/releases) with
+```
+git clone git@github.com:georgiewellock/VTT_formatter.git
+```
+and install the same way.
+```
+cd vttformatter
+pip install -e .
+```
+
+## Tests
+
+Unit tests are available in the top `tests` directory. These can be run using 
+```
+pytest
+```
+
+or 
+```
+python -m unittest discover
+``` 
+in the top directory.
