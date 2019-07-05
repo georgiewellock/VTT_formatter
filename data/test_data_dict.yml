@@ -1,0 +1,89 @@
+duration: 00:01:05.5380000"
+language: en-us
+messages:
+- confidence: '0.69450831413269'
+  content:
+  - Sorry.
+  marker: ef04c7c2-a59e-463f-9d27-b5b1259d6777
+  start: '00:00:03.300'
+  stop: '00:00:06.870'
+- confidence: '0.621036410331726'
+  content:
+  - Yes.
+  marker: 8a017ebb-1722-4e7f-8984-fc6da39c3489
+  start: '00:00:08.100'
+  stop: '00:00:09.620'
+- confidence: '0.713402450084686'
+  content:
+  - Picking up your feet.
+  marker: d9a1567a-1ebe-40ce-983a-98436bcabcfe
+  start: '00:00:19.240'
+  stop: '00:00:20.240'
+- confidence: '0.536461710929871'
+  content:
+  - Yeah.
+  marker: b8e0fa64-8c2f-4070-9b0f-922a50f3fcde
+  start: '00:00:21.930'
+  stop: '00:00:23.490'
+- confidence: '0.889019846916199'
+  content:
+  - But now my headphones or what
+  - the boy, I could it still yeah
+  marker: 88910870-8af9-48f5-bcc4-a501eda95d3f
+  start: '00:00:24.670'
+  stop: '00:00:28.778'
+- confidence: '0.889019846916199'
+  content:
+  - well. I mean, it's it. It will
+  - still be recording the audio.
+  marker: 7d633414-089b-4813-9617-9533f5f215c0
+  start: '00:00:28.778'
+  stop: '00:00:32.570'
+- confidence: '0.889019846916199'
+  content:
+  - It's just not playing in
+  - through the speakers to see
+  marker: 3acc42cf-56d8-4d8e-938d-6b809966d6cf
+  start: '00:00:32.570'
+  stop: '00:00:35.730'
+- confidence: '0.889019846916199'
+  content:
+  - something in there, if you
+  - click. The 3:00 dots. I saw
+  marker: 8bb57fe4-63c7-4178-8c99-7ec7c17b1867
+  start: '00:00:35.730'
+  stop: '00:00:39.206'
+- confidence: '0.889019846916199'
+  content:
+  - something that said turn off
+  - incoming video so that would
+  marker: 7bce27fa-6c7e-40e8-b94d-4def0c04d680
+  start: '00:00:39.206'
+  stop: '00:00:42.366'
+- confidence: '0.889019846916199'
+  content:
+  - turn off.
+  marker: f7327f7c-0534-47e9-a489-4d36af0b82ae
+  start: '00:00:42.366'
+  stop: '00:00:42.998'
+- confidence: '0.740396022796631'
+  content:
+  - 10s of me, so I don't
+  - know if that.
+  marker: 7d21c661-cd53-4978-a3c4-e5fe669d5d1c
+  start: '00:00:44.400'
+  stop: '00:00:49.953'
+- confidence: '0.809084713459015'
+  content:
+  - Yes, yeah, yeah, so you
+  - can actually control how
+  marker: 1302ebc0-09a6-4196-b619-316fe067d58f
+  start: '00:00:52.370'
+  stop: '00:00:59.318'
+- confidence: '0.809084713459015'
+  content:
+  - you want the recording to
+  - go you can.
+  marker: 73dd947f-3bff-4ee6-ab8d-2da524fcdb6c
+  start: '00:00:59.318'
+  stop: '00:01:05.494'
