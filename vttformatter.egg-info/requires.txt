@@ -1,5 +1,4 @@
 numpy
 re
-ruamel.yaml
 unittest
-pytest
+ruamel.yaml
