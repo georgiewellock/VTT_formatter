@@ -103,3 +103,9 @@ or
 python -m unittest discover
 ``` 
 in the top directory.
+
+## Contributing
+
+### Bugs reports and feature requests
+
+If you think you have found a bug, please report it on the [Issue Tracker](https://github.com/georgiewellock/VTT_formatter/issues). This is also the place to propose ideas for new features or ask questions about the design of the vtt formatter. Poor documentation is considered a bug, but please be as specific as possible when asking for improvements.
