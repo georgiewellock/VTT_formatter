@@ -67,6 +67,10 @@ But now my headphones are playing up, I can still hear you though. Well, I mean
 it is crackling. It will still be recording the audio.
 ```
 
+## Simple useage
+
+<img src="https://github.com/georgiewellock/VTT_formatter/blob/master//figures/example_usage.png"/>
+
 ## Installation
 
 The simplest way to install this vttformatter is to use `pip` to install from [PyPI](https://pypi.org/project/vttformatter/)
