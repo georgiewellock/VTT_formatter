@@ -69,9 +69,10 @@ it is crackling. It will still be recording the audio.
 
 ## Simple useage
 
-Example usage can be found in this [jupyter notebook](https://github.com/georgiewellock/VTT_formatter/blob/master/VTT_formatter.ipynb).
-
+The screenshot belows shows the simple implementation of the VTT formatter in a jupyter notebook. This will read in the file defined and create a new `.txt` file in the same directory as the original.
 <img src="https://github.com/georgiewellock/VTT_formatter/blob/master//figures/example_usage.png"/>
+
+Further information can be found in the notebook [here](https://github.com/georgiewellock/VTT_formatter/blob/master/VTT_formatter.ipynb)
 
 ## Installation
 
