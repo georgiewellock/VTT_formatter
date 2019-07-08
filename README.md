@@ -2,9 +2,9 @@
 
 Converts WEBVTT files into text removing timestamps and identifiers and formatting the text into paragraphs.
 
-`VTT_formatter` is a python package that can be executed using python in the command line or through an interface such as a [Jupyter Notebook]((https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html) either locally on a machine or using [Azure Notebooks](https://notebooks.azure.com/#)
+`VTT_formatter` is a python package that can be executed using python in the command line or through an interface such as a [Jupyter Notebook]((https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html) either locally on a machine or using [Azure Notebooks](https://notebooks.azure.com/#).
 
-Full instructions on using `VTT_formatter` on Azure Notebooks, or locally using Anaconda can be found on the [wiki](https://github.com/georgiewellock/VTT_formatter/wiki/VTT_formatter-using-Jupyter-Notebooks)
+Full instructions on using `VTT_formatter` on Azure Notebooks, or locally using Anaconda can be found on the [wiki](https://github.com/georgiewellock/VTT_formatter/wiki/VTT_formatter-using-Jupyter-Notebooks).
 
 ## Example Input/Output 
 
