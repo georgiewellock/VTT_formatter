@@ -69,6 +69,8 @@ it is crackling. It will still be recording the audio.
 
 ## Simple useage
 
+Example usage can be found in this [jupyter notebook](https://github.com/georgiewellock/VTT_formatter/blob/master/VTT_formatter.ipynb).
+
 <img src="https://github.com/georgiewellock/VTT_formatter/blob/master//figures/example_usage.png"/>
 
 ## Installation
