@@ -140,7 +140,8 @@ class VttFormatter:
             full_messages.append(x[2,-2])
             full_messages.append(x[2,-1])
         #return the list with all the fully combined messages
-        return part_messages, full_messages
+        self.full_messages = full_messages
+        return part_messages, self.full_messages
 
     def reformat_vtt(self):
         """create a new .txt file with the same nane as the original .vtt and write each line in the list containing full messages to the file separated by a blank line. """
