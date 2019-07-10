@@ -1,4 +1,3 @@
-__version__ = '1.0'
 import numpy as np
 import os
 import re
@@ -118,6 +117,7 @@ class VttFormatter:
         #initialise a counter to run while it remains less than the length of the message list
         i=0
         while i < len(part_messages)-2:
+            #print(i, flush = True)
             #check to see if the start and stop times for subsequent messages are the same, if not append the message to full_messages and increase the counter to check the next line
             if x[0,i+1] != x[1,i]:
                 full_messages.append(x[2,i])
@@ -125,7 +125,7 @@ class VttFormatter:
             #if the start and stop times are the same initialise an empty string and loop over messages from that point and append them to the string until the start and stop times are no longer consistent
             else:
                 sentence = ''
-                while x[0,i+1] == x[1,i]:
+                while x[0,i+1] == x[1,i] and i+1 < len(part_messages)-2:
                     sentence = sentence + x[2,i] + ' '
                     i+=1
                 sentence = sentence + x[2,i]
@@ -135,12 +135,21 @@ class VttFormatter:
         #check the last 2 elements of the partial message list and append them to full_messages
         if x[0,-1] == x[1,-2]:
             end = x[2,-2] + ' ' + x[2,-1]
-            full_messages.append(end)
+            if x[1,-2] == x[1,-3]:
+                full_messages[-1] = full_messages[-1] + ' ' + end
+            else:
+                full_messages.append(end)
+
+        elif x[1,-2] == x[1,-3]:
+            full_messages[-1] = full_messages[-1] + ' ' + x[2,-2]
+            full_messages.append(x[2,-1])
+
         else:
             full_messages.append(x[2,-2])
             full_messages.append(x[2,-1])
         #return the list with all the fully combined messages
-        return part_messages, full_messages
+        self.full_messages = full_messages
+        return part_messages, self.full_messages
 
     def reformat_vtt(self):
         """create a new .txt file with the same nane as the original .vtt and write each line in the list containing full messages to the file separated by a blank line. """
