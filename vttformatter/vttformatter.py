@@ -1,4 +1,3 @@
-__version__ = '1.0'
 import numpy as np
 import os
 import re
@@ -118,6 +117,7 @@ class VttFormatter:
         #initialise a counter to run while it remains less than the length of the message list
         i=0
         while i < len(part_messages)-2:
+            #print(i, flush = True)
             #check to see if the start and stop times for subsequent messages are the same, if not append the message to full_messages and increase the counter to check the next line
             if x[0,i+1] != x[1,i]:
                 full_messages.append(x[2,i])
@@ -125,7 +125,8 @@ class VttFormatter:
             #if the start and stop times are the same initialise an empty string and loop over messages from that point and append them to the string until the start and stop times are no longer consistent
             else:
                 sentence = ''
-                while x[0,i+1] == x[1,i]:
+                while x[0,i+1] == x[1,i] and i+1 < len(part_messages)-2:
+                    print(i, flush = True)
                     sentence = sentence + x[2,i] + ' '
                     i+=1
                 sentence = sentence + x[2,i]
