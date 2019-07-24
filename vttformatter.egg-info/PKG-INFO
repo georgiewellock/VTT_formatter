@@ -1,15 +1,19 @@
 Metadata-Version: 2.1
 Name: vttformatter
-Version: 1.3
+Version: 2.10
 Summary: WEBVTT to text converter
 Home-page: https://github.com/georgiewellock/VTT_formatter
 Author: Georgina L. Wellock
 Author-email: g.l.wellock@bath.ac.uk
 License: MIT
-Download-URL: https://github.com/georgiewellock/VTT_formatter/archive/1.03.tar.gz
+Download-URL: https://github.com/georgiewellock/VTT_formatter/archive/2.10.tar.gz
 Description: # VttFormatter 
         
         Converts WEBVTT files into text removing timestamps and identifiers and formatting the text into paragraphs.
+        
+        `VTT_formatter` is a python package that can be executed using python in the command line or through an interface such as a [Jupyter Notebook](https://jupyter-notebook-beginner-guide.readthedocs.io/en/latest/what_is_jupyter.html) either locally on a machine or using [Azure Notebooks](https://notebooks.azure.com/#).
+        
+        Full instructions on using `VTT_formatter` in a Jupyter Notebook, on either Azure Notebooks, or locally using Anaconda can be found on the [wiki](https://github.com/georgiewellock/VTT_formatter/wiki/VTT_formatter-using-Jupyter-Notebooks).
         
         ## Example Input/Output 
         
@@ -75,6 +79,13 @@ Description: # VttFormatter
         But now my headphones are playing up, I can still hear you though. Well, I mean 
         it is crackling. It will still be recording the audio.
         ```
+        
+        ## Simple useage
+        
+        The screenshot belows shows the simple implementation of the VTT formatter in a jupyter notebook. This will read in the file defined and create a new `.txt` file in the same directory as the original.
+        <img src="https://github.com/georgiewellock/VTT_formatter/blob/master//figures/example_usage.png"/>
+        
+        Further information can be found in the notebook [here](https://github.com/georgiewellock/VTT_formatter/blob/master/VTT_formatter.ipynb)
         
         ## Installation
         

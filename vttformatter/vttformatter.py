@@ -124,7 +124,6 @@ class VttFormatter:
             else:
                 sentence = ''
                 while x[0,i+1] == x[1,i] and i+1 < len(part_messages)-2:
-                    print(i, flush = True)
                     sentence = sentence + x[2,i] + ' '
                     i+=1
                 sentence = sentence + x[2,i]
@@ -134,7 +133,15 @@ class VttFormatter:
         #check the last 2 elements of the partial message list and append them to full_messages
         if x[0,-1] == x[1,-2]:
             end = x[2,-2] + ' ' + x[2,-1]
-            full_messages.append(end)
+            if x[1,-2] == x[1,-3]:
+                full_messages[-1] = full_messages[-1] + ' ' + end
+            else:
+                full_messages.append(end)
+
+        elif x[1,-2] == x[1,-3]:
+            full_messages[-1] = full_messages[-1] + ' ' + x[2,-2]
+            full_messages.append(x[2,-1])
+
         else:
             full_messages.append(x[2,-2])
             full_messages.append(x[2,-1])
