@@ -65,11 +65,9 @@ class VttFormatter:
         my_message={}
         #loop over specific lines in the list based on a given index and assign the value to a relevent dictionary element
         my_message['confidence']= self.data[i].split(':')[1].strip()
-        pattern1 = re.compile(r'[0-1]{1}.[0-9]{14}')
-        pattern2 = re.compile(r'[0-1]{1}.[0-9]{13}')
-        if not pattern1.match(my_message['confidence']):
-            if not pattern2.match(my_message['confidence']):
-                raise ValueError('Confidence value not in correct format')
+        pattern = re.compile(r'[0-1]{1}.[0-9]+')
+        if not pattern.match(my_message['confidence']):
+            raise ValueError('Confidence value not in correct format')
         i+=2
         my_message['marker'] = self.data[i].strip()
         pattern = re.compile(r'[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}', re.I)
